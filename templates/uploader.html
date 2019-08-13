@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block upload %}
+<li class="active"><a href="{% url 'uploader' %}">Home</a></li>
+ <li><a href="{% url 'upload' %}">Upload new file</a></li>
+ <li><a href="{% url 'upload_history' %}">Uploads History</a></li>
+ {% endblock %}

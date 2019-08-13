@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block upload %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li class="active"><a href="{% url 'receive' %}">Received Files</a></li>
+{% endblock %}
+
+
+{% block body %}
+<table border="1">
+    <tr>
+        <th>Send by</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Uploaded file</th>
+   </tr>
+   {% for upload in uploads %}
+   <tr>
+        <td>{{ upload.uploaded_by }}</td>
+       <td>{{ upload.title }}</td>
+       <td>{{ upload.description }}</td>
+       <td><a href="{{ upload.upload_file.url }}" target="_blank">{{ upload.upload_file }}</a></td>
+   </tr>
+   {% endfor %}
+</table>
+
+{% endblock %}

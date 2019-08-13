@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block upload %}
+<li><a href="{% url 'uploader' %}">Home</a></li>
+ <li><a href="{% url 'upload' %}">Upload new file</a></li>
+ <li class="active"><a href="{% url 'upload_history' %}">Uploads History</a></li>
+ {% endblock %}
+
+ {% block body %}
+ {% for upload in uploads %}
+ <table border="1">
+     <tr>
+         <th>Title</th>
+         <th>Description</th>
+         <th>Uploaded_file</th>
+         <th>Sent_to</th>
+    </tr>
+    <tr>
+        <td>{{ upload.title }}</td>
+        <td>{{ upload.description }}</td>
+        <td><a href="{{ upload.upload_file.url }}" target="_blank">{{ upload.upload_file }}</a></td>
+        <td>{{ upload.send_to }}</td>
+    </tr>
+ </table>
+ {% endfor %}
+ {% endblock %}

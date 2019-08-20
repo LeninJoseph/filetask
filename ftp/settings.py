@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'task1',
         'USER': 'postgres',
-        'PASSWORD' : '1234',
+        'PASSWORD' : '****',
         'HOST': 'localhost'
     }
 }
@@ -121,8 +121,8 @@ USE_TZ = True
 # Gmail automail setup
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testmailfortestmail1@gmail.com'
-EMAIL_HOST_PASSWORD = 'test@1234'
+EMAIL_HOST_USER = 'abc@gmail.com'
+EMAIL_HOST_PASSWORD = '*****************'
 EMAIL_USE_TLS = True
 
 
